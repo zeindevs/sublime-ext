@@ -1,0 +1,33 @@
+[
+    { "keys": ["alt+`"], "command": "open_terminal" },
+    { "keys": ["ctrl+alt+`"], "command": "open_terminal_project_folder" },
+    { "keys": ["ctrl+alt+f"], "command": "js_prettier" },
+    { "keys": ["ctrl+alt+m"], "command": "display_diagrams" },
+    { "keys": ["ctrl+shift+w"], "command": "close_all_files" },
+    { "keys": ["ctrl+shift+,"], "command": "add_date" },
+    { "keys": ["ctrl+shift+."], "command": "add_time" },
+    { "keys": ["ctrl+shift+u"], "command": "capitalize_text" },
+    { "keys": ["ctrl+shift+w"], "command": "toggle_setting", "args": {"setting": "word_wrap"}},
+    { 
+        "keys": ["ctrl+alt+t"], 
+        "command": "toggle_terminus_panel", 
+        "args": {
+            "cmd": "cmd.exe",
+            "cwd": "${file_path:${folder}}",
+            "panel_name": "Terminus"
+        }
+    },
+    {
+        "keys": ["ctrl+shift+8"],
+        "command": "auto_pep8",
+        "args": { "preview": false },
+        "context": [
+            {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "source.python",
+                "match_all": true
+            }
+        ]
+    },
+]
